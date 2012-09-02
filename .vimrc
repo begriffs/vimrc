@@ -44,6 +44,9 @@ nmap <leader>w :w!<cr>
 " Fast quitting
 nmap <leader>q :q<cr>
 
+" Use par for prettier line formatting
+set formatprg=par\ -w72
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
