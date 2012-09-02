@@ -18,6 +18,7 @@
 "    -> NERDTree
 "    -> Tags
 "    -> Git
+"    -> Commenting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -347,3 +348,9 @@ nmap <leader>gg :Ggrep
 nmap <leader>gl :Extradite!<CR>
 nmap <leader>gd :Gdiff<CR>
 nmap <silent> <C-\> :Ggrep <cword><CR>:copen<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Commenting
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader><leader> <plug>NERDCommenterInvert
