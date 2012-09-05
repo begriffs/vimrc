@@ -333,8 +333,20 @@ nmap <leader>rt <Plug>SendFocusedTestToTmux
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <C-s> :NERDTreeToggle<CR>
-map <C-f> :NERDTreeFind<CR>
+function! IsNERDTreeOpen()
+  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+endfunction
+
+function! ToggleFindNerd()
+  if IsNERDTreeOpen()
+    exec ':NERDTreeToggle'
+  else
+    exec ':NERDTreeFind'
+  endif
+endfunction
+
+" If nerd tree is closed, find current file, if open, close it
+map <silent> <C-s> :call ToggleFindNerd()<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
