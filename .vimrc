@@ -120,6 +120,9 @@ try
 catch
 endtry
 
+" Match wombat colors in nerd tree
+hi Directory guifg=#8ac6f2
+
 " Searing red very visible cursor
 hi Cursor guibg=red
 
