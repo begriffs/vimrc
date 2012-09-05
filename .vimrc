@@ -123,6 +123,13 @@ try
 catch
 endtry
 
+" Searing red very visible cursor
+hi Cursor guibg=red
+
+" Don't blink normal mode cursor
+set guicursor=n-v-c:block-Cursor
+set guicursor+=n-v-c:blinkon0
+
 " Set extra options when running in GUI mode
 if has("gui_running")
   set guioptions-=T
