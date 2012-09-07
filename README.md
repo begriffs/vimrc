@@ -9,7 +9,8 @@ directory. Grab the [wombat](https://github.com/ekevin/wombat) color
 scheme. Start MacVim and run `:BundleInstall`.
 
 
-== Running things ==
+== Running Things ==
+
 If you open a tmux terminal alongside MacVim then you can run commands,
 tests, and a REPL from your vim selections.
 
@@ -73,6 +74,9 @@ tests, and a REPL from your vim selections.
   </tr>
   <tr>
     <td>\gd</td><td>Git diff</td>
+  </tr>
+  <tr>
+    <td>\gb</td><td>Git blame</td>
   </tr>
 </tbody>
 </table>
