@@ -378,7 +378,7 @@ nmap <leader>gs :Gstatus<CR>
 nmap <leader>gg :Ggrep 
 nmap <leader>gl :Extradite!<CR>
 nmap <leader>gd :Gdiff<CR>
-nmap <silent> <C-\> :Ggrep <cword><CR>:copen<CR>
+nnoremap <C-\> :silent Ggrep -w "<C-R><C-W>"<CR>:copen<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
