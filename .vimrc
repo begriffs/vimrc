@@ -313,6 +313,10 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-cucumber'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'vim-scripts/Align'
+Bundle 'edsono/vim-matchit'
+Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

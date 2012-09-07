@@ -110,6 +110,25 @@ tests, and a REPL from your vim selections.
 </tbody>
 </table>
 
+== Selection ==
+
+<table>
+<tbody>
+  <tr>
+    <td>vai<td><td>Select whole block at indentation</td>
+  </tr>
+  <tr>
+    <td>vii<td><td>Select inside block at indentation</td>
+  </tr>
+  <tr>
+    <td>var<td><td>Select whole Ruby block</td>
+  </tr>
+  <tr>
+    <td>vir<td><td>Select inside Ruby block</td>
+  </tr>
+</tbody>
+</table>
+
 == Conversion ==
 
 <table>
