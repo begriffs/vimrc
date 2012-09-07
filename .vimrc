@@ -20,6 +20,7 @@
 "    -> Tags
 "    -> Git
 "    -> Commenting
+"    -> Conversion
 "    -> Abbreviation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -403,6 +404,15 @@ nnoremap <C-\> :silent Ggrep -w "<C-R><C-W>"<CR>:copen<CR>
 " => Commenting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map \\ <plug>NERDCommenterInvert
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Conversion
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Convert symbol to string
+nnoremap <silent> <leader>2s F:r"Ea"<ESC>
+" Convert string to symbol
+nnoremap <silent> <leader>2y F"r:,x
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

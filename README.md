@@ -110,6 +110,19 @@ tests, and a REPL from your vim selections.
 </tbody>
 </table>
 
+== Conversion ==
+
+<table>
+<tbody>
+  <tr>
+    <td>,2s<td><td>Convert symbol under cursor to string</td>
+  </tr>
+  <tr>
+    <td>,2y<td><td>Convert string under cursor to symbol</td>
+  </tr>
+</tbody>
+</table>
+
 == Spellchecking ==
 
 <table>
