@@ -36,13 +36,11 @@ set autoread
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader = "\\"
-let g:mapleader = "\\"
+let mapleader = ","
+let g:mapleader = ","
 
-" Fast saving
-nmap <leader>w :w!<cr>
-" Fast quitting
-nmap <leader>q :q<cr>
+" Allow the normal use of "," by pressing it twice
+noremap ,, ,
 
 " Use par for prettier line formatting
 set formatprg=par\ -w72
@@ -385,4 +383,4 @@ nnoremap <C-\> :silent Ggrep -w "<C-R><C-W>"<CR>:copen<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Commenting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader><leader> <plug>NERDCommenterInvert
+map \\ <plug>NERDCommenterInvert

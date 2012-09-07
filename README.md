@@ -17,28 +17,28 @@ tests, and a REPL from your vim selections.
 <table>
 <tbody>
   <tr>
-    <td>\rp</td><td>Prompts for command, and runs it</td>
+    <td>,rp</td><td>Prompts for command, and runs it</td>
   </tr>
   <tr>
-    <td>\rl</td><td>Run last command</td>
+    <td>,rl</td><td>Run last command</td>
   </tr>
   <tr>
-    <td>\rx</td><td>Close tmux panel</td>
+    <td>,rx</td><td>Close tmux panel</td>
   </tr>
   <tr>
-    <td>\rk</td><td>Kill running command</td>
+    <td>,rk</td><td>Kill running command</td>
   </tr>
   <tr>
-    <td>\rp</td><td>Prompts for command, and runs it</td>
+    <td>,rp</td><td>Prompts for command, and runs it</td>
   </tr>
   <tr>
-    <td>\rs</td><td>Run selected text</td>
+    <td>,rs</td><td>Run selected text</td>
   </tr>
   <tr>
-    <td>\rT</td><td>Run all tests in open feature</td>
+    <td>,rT</td><td>Run all tests in open feature</td>
   </tr>
   <tr>
-    <td>\rt</td><td>Run test under cursor</td>
+    <td>,rt</td><td>Run test under cursor</td>
   </tr>
 </tbody>
 </table>
@@ -48,7 +48,7 @@ tests, and a REPL from your vim selections.
 <table>
 <tbody>
   <tr>
-    <td>\tt</td><td>Open list of methods, classes, etc</td>
+    <td>,tt</td><td>Open list of methods, classes, etc</td>
   </tr>
   <tr>
     <td>C-]</td><td>Go to definition/step of word</td>
@@ -64,19 +64,19 @@ tests, and a REPL from your vim selections.
 <table>
 <tbody>
   <tr>
-    <td>\gs</td><td>Git status (fugitive)</td>
+    <td>,gs</td><td>Git status (fugitive)</td>
   </tr>
   <tr>
-    <td>\gg</td><td>Git grep</td>
+    <td>,gg</td><td>Git grep</td>
   </tr>
   <tr>
-    <td>\gl</td><td>Git log (extradition)</td>
+    <td>,gl</td><td>Git log (extradition)</td>
   </tr>
   <tr>
-    <td>\gd</td><td>Git diff</td>
+    <td>,gd</td><td>Git diff</td>
   </tr>
   <tr>
-    <td>\gb</td><td>Git blame</td>
+    <td>,gb</td><td>Git blame</td>
   </tr>
 </tbody>
 </table>
@@ -96,7 +96,7 @@ tests, and a REPL from your vim selections.
 <table>
 <tbody>
   <tr>
-    <td>\ss</td><td>Enable spell checking</td>
+    <td>,ss</td><td>Enable spell checking</td>
   </tr>
 </tbody>
 </table>
