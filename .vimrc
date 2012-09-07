@@ -204,7 +204,8 @@ map k gk
 "map <space> /
 
 " Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+" but preserve cursor coloring
+map <silent> <leader><cr> :noh<cr>:hi Cursor guibg=red<cr>
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
