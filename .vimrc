@@ -19,6 +19,7 @@
 "    -> Tags
 "    -> Git
 "    -> Commenting
+"    -> Abbreviation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -384,3 +385,10 @@ nnoremap <C-\> :silent Ggrep -w "<C-R><C-W>"<CR>:copen<CR>
 " => Commenting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map \\ <plug>NERDCommenterInvert
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Abbreviation
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ruby debugger
+iabbrev rdebug require 'ruby-debug'; Debugger.start; Debugger.settings[:autoeval] = 1; Debugger.settings[:autolist] = 1; debugger
