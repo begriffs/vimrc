@@ -16,6 +16,7 @@
 "    -> Vimux
 "    -> Turbux
 "    -> NERDTree
+"    -> Alignment
 "    -> Tags
 "    -> Git
 "    -> Commenting
@@ -310,6 +311,8 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-cucumber'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'vim-scripts/Align'
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vimux
@@ -358,6 +361,21 @@ endfunction
 
 " If nerd tree is closed, find current file, if open, close it
 map <silent> <C-s> :call ToggleFindNerd()<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Alignment
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Stop Align plugin from forcing its mappings on us
+let g:loaded_AlignMapsPlugin=1
+" Align on equal signs
+map <Leader>a= :Align =<CR>
+" Align on commas
+map <Leader>a, :Align ,<CR>
+" Align on pipes
+map <Leader>a<bar> :Align <bar><CR>
+" Prompt for align character
+map <leader>ap :Align
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -91,6 +91,25 @@ tests, and a REPL from your vim selections.
 </tbody>
 </table>
 
+== Aligning ==
+
+<table>
+<tbody>
+  <tr>
+    <td>,a=<td><td>Align on equal signs</td>
+  </tr>
+  <tr>
+    <td>,a,<td><td>Align on commas</td>
+  </tr>
+  <tr>
+    <td>,a|<td><td>Align on vertical bar</td>
+  </tr>
+  <tr>
+    <td>,ap<td><td>Align on character of your choice</td>
+  </tr>
+</tbody>
+</table>
+
 == Spellchecking ==
 
 <table>
