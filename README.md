@@ -134,10 +134,25 @@ tests, and a REPL from your vim selections.
 <table>
 <tbody>
   <tr>
-    <td>,2s<td><td>Convert symbol under cursor to string</td>
+    <td>,2s<td><td>Convert symbol under cursor from symbol to string</td>
   </tr>
   <tr>
-    <td>,2y<td><td>Convert string under cursor to symbol</td>
+    <td>,2y<td><td>Convert string under cursor from string to symbol</td>
+  </tr>
+  <tr>
+    <td>,2_<td><td>Convert string under cursor to snake_case</td>
+  </tr>
+  <tr>
+    <td>,2c<td><td>Convert string under cursor to camelCase</td>
+  </tr>
+  <tr>
+    <td>,2m<td><td>Convert string under cursor to MixedCase</td>
+  </tr>
+  <tr>
+    <td>,2u<td><td>Convert string under cursor to SNAKE_UPPERCASE</td>
+  </tr>
+  <tr>
+    <td>,2-<td><td>Convert string under cursor to dash-case</td>
   </tr>
 </tbody>
 </table>
