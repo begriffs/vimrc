@@ -158,13 +158,22 @@ Conversion
 </tbody>
 </table>
 
-Spellchecking
--------------
+Misc
+----
 
 <table>
 <tbody>
   <tr>
     <td>,ss</td><td>Enable spell checking</td>
+  </tr>
+  <tr>
+    <td>,e</td><td>Open file prompt with current path</td>
+  </tr>
+  <tr>
+    <td>,&lt;cr&gt;</td><td>Clear search highlights</td>
+  </tr>
+  <tr>
+    <td>&lt;C-s&gt;</td><td>Toggle nerd tree, find file</td>
   </tr>
 </tbody>
 </table>
