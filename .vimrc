@@ -176,6 +176,9 @@ endif
 " Open file prompt with current path
 nmap <leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
 
+" Show undo tree
+nmap <silent> <leader>u :GundoToggle<CR>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -323,6 +326,7 @@ Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'tpope/vim-abolish'
+Bundle 'vim-scripts/Gundo'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

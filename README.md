@@ -164,6 +164,9 @@ Misc
 <table>
 <tbody>
   <tr>
+    <td>,u</td><td>Interactive undo tree</td>
+  </tr>
+  <tr>
     <td>,ss</td><td>Enable spell checking</td>
   </tr>
   <tr>
