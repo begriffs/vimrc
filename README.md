@@ -14,25 +14,18 @@ scheme. Start MacVim and run `:BundleInstall`.
 If you open a tmux terminal alongside MacVim then you can run commands,
 tests, and a REPL from your vim selections.
 
+To use these commands you'll need to note the session, window, and
+pane of your running tmux. For instance, these might be 0, bash, and 0
+respectively. The first time you run ,rs it will prompt you for this
+information. You can change it thereafter with ,rv.
+
 <table>
 <tbody>
   <tr>
-    <td>,rp</td><td>Prompts for command, and runs it</td>
+    <td>,rs</td><td>Send selected text to tmux</td>
   </tr>
   <tr>
-    <td>,rl</td><td>Run last command</td>
-  </tr>
-  <tr>
-    <td>,rx</td><td>Close tmux panel</td>
-  </tr>
-  <tr>
-    <td>,rk</td><td>Kill running command</td>
-  </tr>
-  <tr>
-    <td>,rp</td><td>Prompts for command, and runs it</td>
-  </tr>
-  <tr>
-    <td>,rs</td><td>Run selected text</td>
+    <td>,rv</td><td>Change tmux session, window, and pane attachment</td>
   </tr>
   <tr>
     <td>,rT</td><td>Run all tests in open feature</td>

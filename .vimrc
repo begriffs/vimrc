@@ -13,7 +13,7 @@
 "    -> Misc
 "    -> Helper functions
 "    -> Vundle
-"    -> Vimux
+"    -> Slime
 "    -> Turbux
 "    -> NERDTree
 "    -> Alignment
@@ -306,7 +306,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-fugitive'
 Bundle 'int3/vim-extradite'
-Bundle 'benmills/vimux'
+Bundle 'jgdavey/tslime.vim'
 Bundle 'jgdavey/vim-turbux'
 Bundle 'scrooloose/nerdtree'
 Bundle 'majutsushi/tagbar'
@@ -325,25 +325,11 @@ Bundle 'tpope/vim-abolish'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vimux
+" => Slime
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Prompt for a command to run
-nmap <leader>rp :PromptVimTmuxCommand<CR>
-
-" Run last command executed by RunVimTmuxCommand
-nmap <leader>rl :RunLastVimTmuxCommand<CR>
-
-" Close all other tmux panes in current window
-nmap <leader>rx :CloseVimTmuxPanes<CR>
-
-" Kill any command running in the runner pane
-map <leader>rk :InterruptVimTmuxRunner<CR>
-
-" If text is selected, save it in the v buffer and send to tmux
-vmap <Leader>rs "vy:call VimuxRunCommand(@v . "\n", 0)<CR>
-
-" Select current paragraph and send it to tmux
-nmap <Leader>rs vip<Leader>rs<CR>
+vmap <silent> <Leader>rs <Plug>SendSelectionToTmux
+nmap <silent> <Leader>rs <Plug>NormalModeSendToTmux
+nmap <silent> <Leader>rv <Plug>SetTmuxVars
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
