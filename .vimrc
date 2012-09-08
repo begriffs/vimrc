@@ -205,18 +205,9 @@ vnoremap <silent> # :call VisualSelection('b', '')<CR>
 map j gj
 map k gk
 
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-"map <space> /
-
 " Disable highlight when <leader><cr> is pressed
 " but preserve cursor coloring
 map <silent> <leader><cr> :noh<cr>:hi Cursor guibg=red<cr>
-
-" Close the current buffer
-map <leader>bd :Bclose<cr>
-
-" Close all the buffers
-map <leader>ba :1,1000 bd!<cr>
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
