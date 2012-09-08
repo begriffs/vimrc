@@ -336,6 +336,7 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'tpope/vim-abolish'
 Bundle 'vim-scripts/Gundo'
 Bundle 'tpope/vim-endwise'
+Bundle 'ervandew/supertab'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
