@@ -343,6 +343,9 @@ nmap <leader>rt <Plug>SendFocusedTestToTmux
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Close nerdtree after a file is selected
+let NERDTreeQuitOnOpen = 1
+
 function! IsNERDTreeOpen()
   return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
 endfunction
