@@ -169,9 +169,10 @@ set nowb
 set noswapfile
 
 " Source the vimrc file after saving it
-if has("autocmd")
+augroup sourcing
+  autocmd!
   autocmd bufwritepost .vimrc source $MYVIMRC
-endif
+augroup END
 
 " Open file prompt with current path
 nmap <leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
@@ -223,10 +224,13 @@ nnoremap k gk
 map <silent> <leader><cr> :noh<cr>:hi Cursor guibg=red<cr>
 
 " Return to last edit position when opening files (You want this!)
-autocmd BufReadPost *
-     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal! g`\"" |
-     \ endif
+augroup last_edit
+  autocmd!
+  autocmd BufReadPost *
+       \ if line("'\"") > 0 && line("'\"") <= line("$") |
+       \   exe "normal! g`\"" |
+       \ endif
+augroup END
 " Remember info about open buffers on close
 set viminfo^=%
 
@@ -252,9 +256,13 @@ func! DeleteTrailingWS()
   %s/\s\+$//ge
   exe "normal `z"
 endfunc
-autocmd BufWrite *.py :call DeleteTrailingWS()
-autocmd BufWrite *.coffee :call DeleteTrailingWS()
-autocmd BufWrite *.rb :call DeleteTrailingWS()
+
+augroup whitespace
+  autocmd!
+  autocmd BufWrite *.py :call DeleteTrailingWS()
+  autocmd BufWrite *.coffee :call DeleteTrailingWS()
+  autocmd BufWrite *.rb :call DeleteTrailingWS()
+augroup END
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
