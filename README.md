@@ -2,14 +2,16 @@ This is a full featured yet fast vim configuration. It doesn't do any
 processing unless you ask. The keymapping aggregates commands from
 various plugins into logical groups as follows:
 
-== Installation ==
+Installation
+------------
 
 Backup your .vimrc and .vim files and copy this .vimrc into your home
 directory. Grab the [wombat](https://github.com/ekevin/wombat) color
 scheme. Start MacVim and run `:BundleInstall`.
 
 
-== Running Things ==
+Running Things
+--------------
 
 If you open a tmux terminal alongside MacVim then you can run commands,
 tests, and a REPL from your vim selections.
@@ -36,7 +38,8 @@ information. You can change it thereafter with ,rv.
 </tbody>
 </table>
 
-== Tags ==
+Tags
+----
 
 <table>
 <tbody>
@@ -52,7 +55,8 @@ information. You can change it thereafter with ,rv.
 </tbody>
 </table>
 
-== Git ==
+Git
+---
 
 <table>
 <tbody>
@@ -74,7 +78,8 @@ information. You can change it thereafter with ,rv.
 </tbody>
 </table>
 
-== Commenting ==
+Commenting
+----------
 
 <table>
 <tbody>
@@ -84,7 +89,8 @@ information. You can change it thereafter with ,rv.
 </tbody>
 </table>
 
-== Aligning ==
+Aligning
+--------
 
 <table>
 <tbody>
@@ -103,7 +109,8 @@ information. You can change it thereafter with ,rv.
 </tbody>
 </table>
 
-== Selection ==
+Selection
+---------
 
 <table>
 <tbody>
@@ -122,7 +129,8 @@ information. You can change it thereafter with ,rv.
 </tbody>
 </table>
 
-== Conversion ==
+Conversion
+----------
 
 <table>
 <tbody>
@@ -150,7 +158,8 @@ information. You can change it thereafter with ,rv.
 </tbody>
 </table>
 
-== Spellchecking ==
+Spellchecking
+-------------
 
 <table>
 <tbody>
