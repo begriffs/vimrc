@@ -5,10 +5,19 @@ various plugins into logical groups as follows:
 Installation
 ------------
 
-Backup your .vimrc and .vim files and copy this .vimrc into your home
-directory. Grab the [wombat](https://github.com/ekevin/wombat) color
-scheme. Start MacVim and run `:BundleInstall`.
+1. Backup your .vimrc and .vim files
 
+2. Copy my .vimrc into your home directory
+
+3. Grab the [wombat](https://github.com/ekevin/wombat) color scheme
+
+4. Setup [Vundle](https://github.com/gmarik/vundle):
+
+     ```
+     $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+     ```
+
+5. Start MacVim and run `:BundleInstall`.
 
 Running Things
 --------------
