@@ -61,6 +61,9 @@ Git
 <table>
 <tbody>
   <tr>
+    <td>,g?</td><td>Last-committed files (Monday morning key)</td>
+  </tr>
+  <tr>
     <td>,gs</td><td>Git status (fugitive)</td>
   </tr>
   <tr>
