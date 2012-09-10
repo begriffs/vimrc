@@ -61,6 +61,8 @@ set so=7
 
 " Turn on the WiLd menu
 set wildmenu
+" Tab-complete files up to longest unambiguous prefix
+set wildmode=longest,list,full
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
