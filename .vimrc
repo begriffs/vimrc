@@ -414,7 +414,9 @@ nmap <leader>tt :TagbarToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:extradite_width = 60
 nmap <leader>gs :Gstatus<CR>
-nmap <leader>gg :Ggrep 
+" Hide messy Ggrep output and copen automatically
+command! -nargs=1 GGrep execute "silent! Ggrep " . <q-args>
+nmap <leader>gg :copen<CR>:GGrep 
 nmap <leader>gl :Extradite!<CR>
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>gb :Gblame<CR>
