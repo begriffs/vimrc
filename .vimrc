@@ -115,8 +115,7 @@ set mat=2
 
 " No annoying sound on errors
 set noerrorbells
-set novisualbell
-set t_vb=
+set vb t_vb=
 set tm=500
 
 " Add a bit extra margin to the left
