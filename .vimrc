@@ -45,10 +45,6 @@ let g:mapleader = ","
 " Allow the normal use of "," by pressing it twice
 noremap ,, ,
 
-" Controversial but efficient mapping
-map ; :
-noremap ;; ;
-
 " Use par for prettier line formatting
 set formatprg=par\ -w72
 
