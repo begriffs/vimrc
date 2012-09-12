@@ -412,14 +412,21 @@ nmap <leader>tt :TagbarToggle<CR>
 " => Git
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:extradite_width = 60
-nmap <leader>gs :Gstatus<CR>
 " Hide messy Ggrep output and copen automatically
-command! -nargs=1 GGrep execute "silent! Ggrep " . <q-args>
+function! NonintrusiveGitGrep(term)
+  execute "copen"
+  " Map 't' to open selected item in new tab
+  execute "nnoremap <silent> <buffer> t <C-W><CR><C-W>T"
+  execute "silent! Ggrep " . a:term
+endfunction
+
+command! -nargs=1 GGrep call NonintrusiveGitGrep(<q-args>)
+nmap <leader>gs :Gstatus<CR>
 nmap <leader>gg :copen<CR>:GGrep 
 nmap <leader>gl :Extradite!<CR>
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>gb :Gblame<CR>
-nnoremap <C-\> :silent Ggrep -w "<C-R><C-W>"<CR>:copen<CR>
+nnoremap <silent> <C-\> :call NonintrusiveGitGrep(expand("<cword>"))<CR>
 
 function! CommittedFiles()
   " Clear quickfix list
