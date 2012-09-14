@@ -53,6 +53,9 @@ Tags
 <table>
 <tbody>
   <tr>
+    <td>,tu</td><td>Generate or update ctags</td>
+  </tr>
+  <tr>
     <td>,tt</td><td>Open list of methods, classes, etc</td>
   </tr>
   <tr>

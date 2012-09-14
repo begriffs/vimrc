@@ -322,7 +322,7 @@ Bundle 'jgdavey/vim-turbux'
 Bundle 'scrooloose/nerdtree'
 Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/AutoTag'
+Bundle 'xolox/vim-easytags'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-cucumber'
@@ -395,10 +395,23 @@ map <leader>ap :Align
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tags
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Close tagbar after jumping to a tag
-let g:tagbar_autoclose = 1
+" Prevent automatic ctag updates
+let g:easytags_auto_update = 0
+let g:easytags_auto_highlight = 0
+let g:easytags_on_cursorhold = 0
+
+" Generate tags manually
+nmap <leader>tu :UpdateTags<CR>
+
+" Scan recursively, not just current file
+let g:easytags_autorecurse = 1
+" Follow symbolic links
+let g:easytags_resolve_links = 1
+
 " Toggle tagbar
 nmap <leader>tt :TagbarToggle<CR>
+" Close tagbar after jumping to a tag
+let g:tagbar_autoclose = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
