@@ -184,3 +184,7 @@ information. You can change it thereafter with ,rv.
   </tr>
 </tbody>
 </table>
+
+## Customizing
+
+Add your own settings to `~/.vimrc.local` and they will be loaded.

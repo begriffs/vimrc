@@ -22,6 +22,7 @@
 "    -> Commenting
 "    -> Conversion
 "    -> Abbreviation
+"    -> Customization
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -484,6 +485,10 @@ nmap <leader>2- cr-
 " Ruby debugger
 iabbrev rdebug require 'ruby-debug'; Debugger.start; Debugger.settings[:autoeval] = 1; Debugger.settings[:autolist] = 1; debugger
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Customization
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
