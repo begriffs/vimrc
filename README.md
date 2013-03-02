@@ -1,32 +1,28 @@
 This is a full featured yet fast vim configuration. It doesn't do any
 processing unless you ask. The keymapping aggregates commands from
-various plugins into logical groups as follows:
+various plugins into logical groups, as documented below.
 
-Installation
-------------
+You can [read more](http://blog.begriffs.com/2012/09/bespoke-vim.html)
+about the design and ideas behind this Vim config.
 
-1. Backup your .vimrc and .vim files
+## Installation
 
-2. Copy my .vimrc into your home directory
+     curl -o - https://raw.github.com/begriffs/dotfiles/master/install.sh | sh
 
-3. Grab the [wombat](https://github.com/ekevin/wombat) color scheme
+Don't worry, it will back up your existing vim configuration.
 
-4. Setup [Vundle](https://github.com/gmarik/vundle):
+## Keybindings
 
-     ```
-     $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-     ```
+These dotfiles organize commands into logical groups to help you
+remember them.
 
-5. Start MacVim and run `:BundleInstall`.
-
-Running Things
---------------
+### Running Things
 
 If you open a tmux terminal alongside MacVim then you can run commands,
 tests, and a REPL from your vim selections.
 
-To use these commands you'll need to note the session, window, and
-pane of your running tmux. For instance, these might be 0, bash, and 0
+To use these commands you'll need to note the session, window, and pane
+of your running tmux. For instance, these might be `0`, `bash`, and `0`
 respectively. The first time you run ,rs it will prompt you for this
 information. You can change it thereafter with ,rv.
 
@@ -47,8 +43,7 @@ information. You can change it thereafter with ,rv.
 </tbody>
 </table>
 
-Tags
-----
+### Tags
 
 <table>
 <tbody>
@@ -67,8 +62,7 @@ Tags
 </tbody>
 </table>
 
-Git
----
+### Git
 
 <table>
 <tbody>
@@ -93,8 +87,7 @@ Git
 </tbody>
 </table>
 
-Commenting
-----------
+### Commenting
 
 <table>
 <tbody>
@@ -104,8 +97,7 @@ Commenting
 </tbody>
 </table>
 
-Aligning
---------
+### Aligning
 
 <table>
 <tbody>
@@ -124,8 +116,7 @@ Aligning
 </tbody>
 </table>
 
-Selection
----------
+### Selection
 
 <table>
 <tbody>
@@ -144,8 +135,7 @@ Selection
 </tbody>
 </table>
 
-Conversion
-----------
+### Conversion
 
 <table>
 <tbody>
@@ -173,8 +163,7 @@ Conversion
 </tbody>
 </table>
 
-Misc
-----
+### Misc
 
 <table>
 <tbody>
