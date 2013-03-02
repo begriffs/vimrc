@@ -51,11 +51,6 @@ noremap ,, ,
 " Use par for prettier line formatting
 set formatprg=par\ -w72
 
-augroup go
-  autocmd!
-  autocmd FileType go autocmd BufWritePre <buffer> Fmt
-augroup END
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle
@@ -93,9 +88,6 @@ Bundle 'tpope/vim-endwise'
 Bundle 'ervandew/supertab'
 Bundle 'Raimondi/delimitMate'
 Bundle 'docunext/closetag.vim'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'hallettj/jslint.vim'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
