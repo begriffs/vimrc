@@ -102,16 +102,16 @@ information. You can change it thereafter with ,rv.
 <table>
 <tbody>
   <tr>
-    <td>,a=<td><td>Align on equal signs</td>
+    <td>,a=</td><td>Align on equal signs</td>
   </tr>
   <tr>
-    <td>,a,<td><td>Align on commas</td>
+    <td>,a,</td><td>Align on commas</td>
   </tr>
   <tr>
-    <td>,a|<td><td>Align on vertical bar</td>
+    <td>,a|</td><td>Align on vertical bar</td>
   </tr>
   <tr>
-    <td>,ap<td><td>Align on character of your choice</td>
+    <td>,ap</td><td>Align on character of your choice</td>
   </tr>
 </tbody>
 </table>
@@ -121,16 +121,16 @@ information. You can change it thereafter with ,rv.
 <table>
 <tbody>
   <tr>
-    <td>vai<td><td>Select whole block at indentation</td>
+    <td>vai</td><td>Select whole block at indentation</td>
   </tr>
   <tr>
-    <td>vii<td><td>Select inside block at indentation</td>
+    <td>vii</td><td>Select inside block at indentation</td>
   </tr>
   <tr>
-    <td>var<td><td>Select whole Ruby block</td>
+    <td>var</td><td>Select whole Ruby block</td>
   </tr>
   <tr>
-    <td>vir<td><td>Select inside Ruby block</td>
+    <td>vir</td><td>Select inside Ruby block</td>
   </tr>
 </tbody>
 </table>
@@ -140,25 +140,25 @@ information. You can change it thereafter with ,rv.
 <table>
 <tbody>
   <tr>
-    <td>,2s<td><td>Convert symbol under cursor from symbol to string</td>
+    <td>,2s</td><td>Convert symbol under cursor from symbol to string</td>
   </tr>
   <tr>
-    <td>,2y<td><td>Convert string under cursor from string to symbol</td>
+    <td>,2y</td><td>Convert string under cursor from string to symbol</td>
   </tr>
   <tr>
-    <td>,2_<td><td>Convert string under cursor to snake_case</td>
+    <td>,2_</td><td>Convert string under cursor to snake_case</td>
   </tr>
   <tr>
-    <td>,2c<td><td>Convert string under cursor to camelCase</td>
+    <td>,2c</td><td>Convert string under cursor to camelCase</td>
   </tr>
   <tr>
-    <td>,2m<td><td>Convert string under cursor to MixedCase</td>
+    <td>,2m</td><td>Convert string under cursor to MixedCase</td>
   </tr>
   <tr>
-    <td>,2u<td><td>Convert string under cursor to SNAKE_UPPERCASE</td>
+    <td>,2u</td><td>Convert string under cursor to SNAKE_UPPERCASE</td>
   </tr>
   <tr>
-    <td>,2-<td><td>Convert string under cursor to dash-case</td>
+    <td>,2-</td><td>Convert string under cursor to dash-case</td>
   </tr>
 </tbody>
 </table>
@@ -180,7 +180,7 @@ information. You can change it thereafter with ,rv.
     <td>,&lt;cr&gt;</td><td>Clear search highlights</td>
   </tr>
   <tr>
-    <td>&lt;C-s&gt;</td><td>Toggle nerd tree, find file</td>
+    <td>C-s</td><td>Toggle nerd tree, find file</td>
   </tr>
 </tbody>
 </table>
