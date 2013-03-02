@@ -1,5 +1,6 @@
 " Sections:
 "    -> General
+"    -> Vundle
 "    -> VIM user interface
 "    -> Colors and Fonts
 "    -> Files and backups
@@ -12,7 +13,6 @@
 "    -> Spell checking
 "    -> Misc
 "    -> Helper functions
-"    -> Vundle
 "    -> Slime
 "    -> Turbux
 "    -> NERDTree
@@ -50,6 +50,52 @@ noremap ,, ,
 
 " Use par for prettier line formatting
 set formatprg=par\ -w72
+
+augroup go
+  autocmd!
+  autocmd FileType go autocmd BufWritePre <buffer> Fmt
+augroup END
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vundle
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-fugitive'
+Bundle 'int3/vim-extradite'
+Bundle 'jgdavey/tslime.vim'
+Bundle 'jgdavey/vim-turbux'
+Bundle 'scrooloose/nerdtree'
+Bundle 'majutsushi/tagbar'
+Bundle 'tpope/vim-surround'
+Bundle 'xolox/vim-easytags'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-commentary'
+Bundle 'vim-scripts/Align'
+Bundle 'edsono/vim-matchit'
+Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'tpope/vim-abolish'
+Bundle 'vim-scripts/Gundo'
+Bundle 'tpope/vim-endwise'
+Bundle 'ervandew/supertab'
+Bundle 'Raimondi/delimitMate'
+Bundle 'docunext/closetag.vim'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'hallettj/jslint.vim'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -124,8 +170,9 @@ set foldcolumn=1
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
-syntax enable 
+syntax enable
 
+Bundle 'vim-scripts/Wombat'
 try
   colorscheme wombat
 catch
@@ -300,44 +347,6 @@ function! VisualSelection(direction, extra_filter) range
   let @/ = l:pattern
   let @" = l:saved_reg
 endfunction
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vundle
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
-" My Bundles here:
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-fugitive'
-Bundle 'int3/vim-extradite'
-Bundle 'jgdavey/tslime.vim'
-Bundle 'jgdavey/vim-turbux'
-Bundle 'scrooloose/nerdtree'
-Bundle 'majutsushi/tagbar'
-Bundle 'tpope/vim-surround'
-Bundle 'xolox/vim-easytags'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-cucumber'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'vim-scripts/Align'
-Bundle 'edsono/vim-matchit'
-Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'kana/vim-textobj-user'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'tpope/vim-abolish'
-Bundle 'vim-scripts/Gundo'
-Bundle 'tpope/vim-endwise'
-Bundle 'ervandew/supertab'
-Bundle 'Raimondi/delimitMate'
-Bundle 'docunext/closetag.vim'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
