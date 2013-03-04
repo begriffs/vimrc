@@ -16,7 +16,7 @@ if [ -e ~/.vim/colors ]; then
 fi
 
 echo "backing up current vim config"
-today=`date +%Y%m%d`
+today=`date +%Y%m%d_%H%M%S`
 for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc; do [ -e $i ] && [ ! -L $i ] && mv $i $i.$today; done
 
 echo "Creating symlinks"
