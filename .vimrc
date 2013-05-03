@@ -162,14 +162,14 @@ set foldcolumn=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable syntax highlighting
-syntax enable
-
 Bundle 'vim-scripts/Wombat'
 try
   colorscheme wombat
 catch
 endtry
+
+" Enable syntax highlighting
+syntax enable
 
 " Match wombat colors in nerd tree
 hi Directory guifg=#8ac6f2
