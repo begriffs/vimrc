@@ -435,6 +435,7 @@ nmap <leader>gl :Extradite!<CR>
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>gb :Gblame<CR>
 nnoremap <silent> <C-\> :call NonintrusiveGitGrep(expand("<cword>"))<CR>
+vnoremap <silent> <C-\> "*y:call NonintrusiveGitGrep(@*)<CR>
 
 function! CommittedFiles()
   " Clear quickfix list
