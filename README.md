@@ -27,11 +27,6 @@ remember them.
 If you open a tmux terminal alongside MacVim then you can run commands,
 tests, and a REPL from your vim selections.
 
-To use these commands you'll need to note the session, window, and pane
-of your running tmux. For instance, these might be `0`, `bash`, and `0`
-respectively. The first time you run ,rs it will prompt you for this
-information. You can change it thereafter with ,rv.
-
 <table>
 <tbody>
   <tr>
