@@ -183,6 +183,9 @@ tests, and a REPL from your vim selections.
   <tr>
     <td>C-s</td><td>Toggle nerd tree, find file</td>
   </tr>
+  <tr>
+    <td>,ff</td><td>Toggle MacVim fullscreen mode</td>
+  </tr>
 </tbody>
 </table>
 

@@ -159,6 +159,8 @@ set vb t_vb=
 " Add a bit extra margin to the left
 set foldcolumn=1
 
+" Macvim fullscreen toggle
+map <silent> <leader>ff :set invfu<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
