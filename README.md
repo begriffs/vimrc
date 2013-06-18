@@ -11,6 +11,12 @@ about the design and ideas behind this Vim config.
 
 Don't worry, it will back up your existing vim configuration.
 
+## Upgrading
+
+     cd ~/.begriffs-vim
+     git pull
+     vim -u .vimrc +BundleUpdate +qall
+
 ## Keybindings
 
 These dotfiles organize commands into logical groups to help you
