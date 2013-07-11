@@ -31,10 +31,6 @@
 " Sets how many lines of history VIM has to remember
 set history=700
 
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
-
 " Set to auto read when a file is changed from the outside
 set autoread
 
@@ -90,6 +86,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'ervandew/supertab'
 Bundle 'Raimondi/delimitMate'
 Bundle 'docunext/closetag.vim'
+Bundle 'kchmck/vim-coffee-script'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -173,6 +170,10 @@ endtry
 
 " Enable syntax highlighting
 syntax enable
+
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
 
 " Match wombat colors in nerd tree
 hi Directory guifg=#8ac6f2
