@@ -88,6 +88,8 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'docunext/closetag.vim'
 Bundle 'kchmck/vim-coffee-script'
 
+" Haskell stuff
+Bundle 'vim-scripts/haskell.vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
