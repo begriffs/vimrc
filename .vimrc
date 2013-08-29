@@ -164,7 +164,7 @@ map <silent> <leader>ff :set invfu<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'vim-scripts/Wombat'
+Bundle 'verbitan/Wombat'
 try
   colorscheme wombat
 catch
