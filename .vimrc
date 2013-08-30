@@ -90,6 +90,7 @@ Bundle 'kchmck/vim-coffee-script'
 
 " Haskell stuff
 Bundle 'vim-scripts/haskell.vim'
+Bundle 'pbrisbin/html-template-syntax'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
