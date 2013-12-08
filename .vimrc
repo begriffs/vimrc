@@ -60,37 +60,46 @@ call vundle#rc()
 " required!
 Bundle 'gmarik/vundle'
 
-" My Bundles here:
-Bundle 'xolox/vim-misc'
-Bundle 'tpope/vim-rails'
+" Support bundles
+Bundle 'jgdavey/tslime.vim'
+Bundle 'Shougo/vimproc.vim'
+Bundle 'Shougo/neocomplcache.vim'
+" Bundle 'xolox/vim-misc'
+" Bundle 'tpope/vim-surround'
+" Bundle 'edsono/vim-matchit'
+" Bundle 'michaeljsmith/vim-indent-object'
+" Bundle 'kana/vim-textobj-user'
+
+" Git
 Bundle 'tpope/vim-fugitive'
 Bundle 'int3/vim-extradite'
-Bundle 'jgdavey/tslime.vim'
-Bundle 'jgdavey/vim-turbux'
-Bundle 'scrooloose/nerdtree'
-Bundle 'majutsushi/tagbar'
-Bundle 'tpope/vim-surround'
-Bundle 'xolox/vim-easytags'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-commentary'
-Bundle 'vim-scripts/Align'
-Bundle 'edsono/vim-matchit'
-Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'kana/vim-textobj-user'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'tpope/vim-abolish'
-Bundle 'vim-scripts/Gundo'
-Bundle 'tpope/vim-endwise'
-Bundle 'ervandew/supertab'
-Bundle 'Raimondi/delimitMate'
-Bundle 'docunext/closetag.vim'
-Bundle 'kchmck/vim-coffee-script'
 
-" Haskell stuff
-Bundle 'vim-scripts/haskell.vim'
-Bundle 'pbrisbin/html-template-syntax'
+" Bars, panels, and files
+Bundle 'scrooloose/nerdtree'
+Bundle 'bling/vim-airline'
+" Bundle 'majutsushi/tagbar'
+" Bundle 'wincent/Command-T'
+
+" Tags and completion
+" Bundle 'xolox/vim-easytags'
+" Bundle 'ervandew/supertab'
+
+" Text manipulation
+Bundle 'vim-scripts/Align'
+Bundle 'vim-scripts/Gundo'
+" Bundle 'Raimondi/delimitMate'
+" Bundle 'docunext/closetag.vim'
+Bundle 'tpope/vim-commentary'
+Bundle 'godlygeek/tabular'
+
+" Haskell
+Bundle 'dag/vim2hs'
+Bundle 'eagletmt/ghcmod-vim'
+Bundle 'eagletmt/neco-ghc'
+" Bundle 'vim-scripts/haskell.vim'
+" Bundle 'Twinside/vim-haskellConceal'
+" Bundle 'pbrisbin/html-template-syntax'
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -159,15 +168,13 @@ set vb t_vb=
 " Add a bit extra margin to the left
 set foldcolumn=1
 
-" Macvim fullscreen toggle
-map <silent> <leader>ff :set invfu<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'verbitan/Wombat'
+Bundle 'vim-scripts/wombat256.vim'
 try
-  colorscheme wombat
+  colorscheme wombat256mod
 catch
 endtry
 
@@ -183,6 +190,9 @@ hi Directory guifg=#8ac6f2
 
 " Searing red very visible cursor
 hi Cursor guibg=red
+
+" Use same color behind concealed unicode characters
+hi clear Conceal
 
 " Don't blink normal mode cursor
 set guicursor=n-v-c:block-Cursor
@@ -203,8 +213,9 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 " Use large font by default in MacVim
+" set gfn=Meslo\ LG\ L\ DZ\ for\ Powerline:h24
+" set guifont=Meslo\ LG\ L\ DZ\ for\ Powerline:h24
 set gfn=Monaco:h19
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -225,6 +236,9 @@ nmap <leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
 
 " Show undo tree
 nmap <silent> <leader>u :GundoToggle<CR>
+
+" Fuzzy find files
+nnoremap <silent> <Leader><space> :CommandT<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -248,6 +262,10 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+" Pretty unicode haskell symbols
+let g:haskell_conceal_wide = 1
+let g:haskell_conceal_enumerations = 1
+
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -265,9 +283,14 @@ vnoremap <silent> # :call VisualSelection('b', '')<CR>
 nnoremap j gj
 nnoremap k gk
 
+noremap <c-h> <c-w>h
+noremap <c-k> <c-w>k
+noremap <c-j> <c-w>j
+noremap <c-l> <c-w>l
+
 " Disable highlight when <leader><cr> is pressed
 " but preserve cursor coloring
-map <silent> <leader><cr> :noh<cr>:hi Cursor guibg=red<cr>
+map <silent> <leader><cr> :noh<cr>:GhcModTypeClear<cr>:hi Cursor guibg=red<cr>
 
 " Return to last edit position when opening files (You want this!)
 augroup last_edit
@@ -286,11 +309,6 @@ set viminfo^=%
 """"""""""""""""""""""""""""""
 " Always show the status line
 set laststatus=2
-
-" Format the status line
-set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
-
-let g:Powerline_symbols = 'fancy'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -400,6 +418,9 @@ map <Leader>a<bar> :Align <bar><CR>
 " Prompt for align character
 map <leader>ap :Align
 
+" Enable some tabular presets for Haskell
+let g:haskell_tabular = 1
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tags
@@ -462,6 +483,35 @@ nnoremap <silent> <leader>g? :call CommittedFiles()<CR>:copen<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Haskell Interrogation
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 1
+" Use neocomplcache.
+let g:neocomplcache_enable_at_startup = 1
+" Use smartcase.
+let g:neocomplcache_enable_smart_case = 1
+
+" Shell like behavior(not recommended).
+set completeopt+=longest
+let g:neocomplcache_enable_auto_select = 1
+let g:neocomplcache_disable_auto_complete = 1
+inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
+
+" Tab completion
+"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" Type of expression under cursor
+nmap <silent> <leader>ht :GhcModType<CR>
+" GHC errors and warnings
+nmap <silent> <leader>hc :GhcModCheck<CR>
+" Haskell Lint
+nmap <silent> <leader>hl :GhcModLint<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Conversion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Convert symbol to string
@@ -479,13 +529,6 @@ nmap <leader>2m crm
 nmap <leader>2u cru
 " Convert name to dash-case
 nmap <leader>2- cr-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Abbreviation
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Ruby debugger
-iabbrev rdebug require 'ruby-debug'; Debugger.start; Debugger.settings[:autoeval] = 1; Debugger.settings[:autolist] = 1; debugger
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
