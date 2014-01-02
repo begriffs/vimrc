@@ -132,7 +132,7 @@ set whichwrap+=<,>,h,l
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Highlight search results
@@ -161,6 +161,7 @@ set foldcolumn=1
 
 " Macvim fullscreen toggle
 map <silent> <leader>ff :set invfu<CR>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -217,11 +218,10 @@ set ffs=unix,dos,mac
 " Use large font by default in MacVim
 set gfn=Monaco:h19
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
+" Turn backup off, since most stuff is in Git anyway...
 set nobackup
 set nowb
 set noswapfile
@@ -237,6 +237,10 @@ nmap <leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
 
 " Show undo tree
 nmap <silent> <leader>u :GundoToggle<CR>
+
+" Fuzzy find files
+" TODO: automate CommandT install
+" nnoremap <silent> <Leader><space> :CommandT<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -303,7 +307,7 @@ set laststatus=2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Delete trailing white space on save, useful for Python and CoffeeScript ;)
+" Delete trailing white space on save
 func! DeleteTrailingWS()
   exe "normal mz"
   %s/\s\+$//ge
@@ -332,7 +336,7 @@ function! CmdLine(str)
   exe "menu Foo.Bar :" . a:str
   emenu Foo.Bar
   unmenu Foo
-endfunction 
+endfunction
 
 function! VisualSelection(direction, extra_filter) range
   let l:saved_reg = @"
@@ -392,6 +396,7 @@ endfunction
 
 " If nerd tree is closed, find current file, if open, close it
 map <silent> <C-s> <ESC>:call ToggleFindNerd()<CR>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Alignment
