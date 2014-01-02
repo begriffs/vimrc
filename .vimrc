@@ -87,6 +87,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'docunext/closetag.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'joshuarh/vim-stopsign'
+Bundle 'kien/ctrlp.vim'
 
 " Haskell stuff
 Bundle 'vim-scripts/haskell.vim'
@@ -239,8 +240,7 @@ nmap <leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
 nmap <silent> <leader>u :GundoToggle<CR>
 
 " Fuzzy find files
-" TODO: automate CommandT install
-" nnoremap <silent> <Leader><space> :CommandT<CR>
+nnoremap <silent> <Leader><space> :CtrlP<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
