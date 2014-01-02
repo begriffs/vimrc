@@ -21,7 +21,6 @@
 "    -> Git
 "    -> Commenting
 "    -> Conversion
-"    -> Abbreviation
 "    -> Customization
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -87,6 +86,7 @@ Bundle 'ervandew/supertab'
 Bundle 'Raimondi/delimitMate'
 Bundle 'docunext/closetag.vim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'joshuarh/vim-stopsign'
 
 " Haskell stuff
 Bundle 'vim-scripts/haskell.vim'
@@ -486,13 +486,6 @@ nmap <leader>2m crm
 nmap <leader>2u cru
 " Convert name to dash-case
 nmap <leader>2- cr-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Abbreviation
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Ruby debugger
-iabbrev rdebug require 'ruby-debug'; Debugger.start; Debugger.settings[:autoeval] = 1; Debugger.settings[:autolist] = 1; debugger
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
