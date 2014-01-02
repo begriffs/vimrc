@@ -165,14 +165,23 @@ map <silent> <leader>ff :set invfu<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'verbitan/Wombat'
+Bundle 'vim-scripts/wombat256.vim'
 try
-  colorscheme wombat
+  colorscheme wombat256mod
 catch
 endtry
 
 " Enable syntax highlighting
 syntax enable
+
+" Adjust signscolumn and syntastic to match wombat
+hi! link SignColumn LineNr
+hi! link SyntasticErrorSign ErrorMsg
+hi! link SyntasticWarningSign WarningMsg
+
+" Use pleasant but very visible search hilighting
+hi Search ctermfg=white ctermbg=173 cterm=none guifg=#ffffff guibg=#e5786d gui=none
+hi! link Visual Search
 
 " Enable filetype plugins
 filetype plugin on
@@ -183,6 +192,9 @@ hi Directory guifg=#8ac6f2
 
 " Searing red very visible cursor
 hi Cursor guibg=red
+
+" Use same color behind concealed unicode characters
+hi clear Conceal
 
 " Don't blink normal mode cursor
 set guicursor=n-v-c:block-Cursor
