@@ -5,17 +5,13 @@ various plugins into logical groups, as documented below.
 You can [read more](http://blog.begriffs.com/2012/09/bespoke-vim.html)
 about the design and ideas behind this Vim config.
 
-## Installation
+## Installation / Upgrading
+
+One command does it all.
 
      curl -o - https://raw.github.com/begriffs/dotfiles/master/install.sh | sh
 
 Don't worry, it will back up your existing vim configuration.
-
-## Upgrading
-
-     cd ~/.begriffs-vim
-     git pull
-     vim -u .vimrc +BundleUpdate +qall
 
 ## Keybindings
 
