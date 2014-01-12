@@ -165,7 +165,7 @@ tests, and a REPL from your vim selections.
 <table>
 <tbody>
   <tr>
-    <td>C-space</td><td>Fuzzy file find (CtrlP)</td>
+    <td>,&lt;space&gt;</td><td>Fuzzy file find (CtrlP)</td>
   </tr>
   <tr>
     <td>,u</td><td>Interactive undo tree</td>
