@@ -241,6 +241,7 @@ nmap <silent> <leader>u :GundoToggle<CR>
 
 " Fuzzy find files
 nnoremap <silent> <Leader><space> :CtrlP<CR>
+let g:ctrlp_max_files=0
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
