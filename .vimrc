@@ -302,6 +302,11 @@ augroup END
 " Remember info about open buffers on close
 set viminfo^=%
 
+" Open window splits in various places
+nmap <leader>sh :leftabove  vnew<CR>
+nmap <leader>sl :rightbelow vnew<CR>
+nmap <leader>sk :leftabove  new<CR>
+nmap <leader>sj :rightbelow new<CR>
 
 """"""""""""""""""""""""""""""
 " => Status line
