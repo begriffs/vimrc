@@ -157,11 +157,21 @@ set mat=2
 set noerrorbells
 set vb t_vb=
 
+if &term =~ '256color'
+  " disable Background Color Erase (BCE) so that color schemes
+  " render properly when inside 256-color tmux and GNU screen.
+  " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+  set t_ut=
+endif
+
 " Add a bit extra margin to the left
 set foldcolumn=1
 
 " Macvim fullscreen toggle
 map <silent> <leader>ff :set invfu<CR>
+
+" Force redraw
+map <silent> <leader>r :redraw!<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -193,7 +203,7 @@ filetype indent on
 hi Directory guifg=#8ac6f2
 
 " Searing red very visible cursor
-hi Cursor guibg=red
+hi Cursor ctermbg=red guibg=red
 
 " Use same color behind concealed unicode characters
 hi clear Conceal
@@ -289,7 +299,7 @@ noremap <c-l> <c-w>l
 
 " Disable highlight when <leader><cr> is pressed
 " but preserve cursor coloring
-map <silent> <leader><cr> :noh<cr>:hi Cursor guibg=red<cr>
+map <silent> <leader><cr> :noh<cr>:hi Cursor ctermbg=red guibg=red<cr>
 
 " Return to last edit position when opening files (You want this!)
 augroup last_edit
