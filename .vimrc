@@ -88,6 +88,7 @@ Bundle 'docunext/closetag.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'joshuarh/vim-stopsign'
 Bundle 'kien/ctrlp.vim'
+Bundle 'christoomey/vim-tmux-navigator'
 
 " Haskell stuff
 Bundle 'vim-scripts/haskell.vim'
@@ -291,11 +292,6 @@ vnoremap <silent> # :call VisualSelection('b', '')<CR>
 " Treat long lines as break lines (useful when moving around in them)
 nnoremap j gj
 nnoremap k gk
-
-noremap <c-h> <c-w>h
-noremap <c-k> <c-w>k
-noremap <c-j> <c-w>j
-noremap <c-l> <c-w>l
 
 " Disable highlight when <leader><cr> is pressed
 " but preserve cursor coloring
