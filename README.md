@@ -9,7 +9,7 @@ about the design and ideas behind this Vim config.
 
 One command does it all.
 
-     curl -o - https://raw.github.com/begriffs/dotfiles/master/install.sh | sh
+     curl -o - https://raw.github.com/begriffs/vimrc/master/install.sh | sh
 
 Don't worry, it will back up your existing vim configuration.
 
