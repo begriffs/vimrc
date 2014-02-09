@@ -14,11 +14,11 @@ done
 endpath="$HOME/.begriffs-vim"
 
 if [ ! -e $endpath/.git ]; then
-  msg "Cloning begriffs/dotfiles"
-  git clone https://github.com/begriffs/dotfiles.git $endpath
+  msg "Cloning begriffs/vimrc"
+  git clone https://github.com/begriffs/vimrc.git $endpath
 else
   msg "Existing installation detected"
-  msg "Updating from begriffs/dotfiles"
+  msg "Updating from begriffs/vimrc"
   cd $endpath && git pull
 fi
 
