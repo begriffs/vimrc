@@ -1,3 +1,13 @@
+## Deprecation warning:
+
+I've learned quite a bit since creating this project, and now prefer
+built-in editor functionality to these plugins. See my article:
+https://begriffs.com/posts/2019-07-19-history-use-vim.html
+
+<hr />
+
+## Original readme:
+
 This is a full featured yet fast vim configuration. It doesn't do any
 processing unless you ask. The keymapping aggregates commands from
 various plugins into logical groups, as documented below.
